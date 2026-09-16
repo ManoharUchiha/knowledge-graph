@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "repo-intel": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        ".",
+        "run",
+        "python",
+        "-m",
+        "repo_intelligence.mcp_server"
+      ],
+      "env": {
+        "NEO4J_URI": "bolt://localhost:7687"
+      },
+      "transport": "stdio"
+    }
+  }
+}

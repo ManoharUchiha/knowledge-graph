@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+
+# Tooling
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.devin/mcp_config.local.json
+.python-version
+uv.lock
+
+# Test artifacts
+test_repo/
+
+# Investigation memory (optional; use env var for path instead)
+*.db
+repo_intel_memory.db
+
+# OS
+.DS_Store

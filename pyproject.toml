@@ -1,0 +1,35 @@
+[project]
+name = "knowledge-graph"
+version = "0.1.0"
+description = "Repository Intelligence Platform"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "tree-sitter>=0.21.0",
+    "tree-sitter-python",
+    "tree-sitter-yaml",
+    "tree-sitter-hcl",
+    "tree-sitter-go",
+    "pydantic>=2.0",
+    "neo4j>=5.0",
+    "click",
+    "pytest",
+    "jedi>=0.19.0",
+    "sqlalchemy>=2.0.0",
+    "opentelemetry-api>=1.20.0",
+    "mcp>=1.0.0,<2.0.0",
+]
+
+[project.scripts]
+repo-intel = "repo_intelligence.cli.main:cli"
+repo-intel-mcp = "repo_intelligence.mcp_server:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pylint.main]
+init-hook = 'import sys; sys.path.insert(0, "src")'
